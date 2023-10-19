@@ -1,0 +1,17 @@
+Estrutura do banco de dados em sql:
+CREATE DATABASE Chat;
+
+USE Chat;
+
+CREATE TABLE Mensagens(
+	cod_mensa INT PRIMARY KEY AUTO_INCREMENT,
+	Hist CHAR(200),
+	DataM datetime
+);
+INSERT INTO (Hist,DataM)
+VALUES ('',curdate());
+_____________________________________________________________________________________________________________________________________________________
+
+$consultar = mysqli_query($conexao,"SELECT Hist
+											FROM  Mensagens
+											");
